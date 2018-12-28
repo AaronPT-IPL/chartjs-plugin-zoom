@@ -207,7 +207,8 @@ function doZoom(chartInstance, zoom, center, whichAxes) {
 function panIndexScale(scale, delta, panOptions) {
 	var labels = scale.chart.data.labels;
 	var lastLabelIndex = labels.length - 1;
-	var offsetAmt = Math.max((scale.ticks.length - ((scale.options.gridLines.offsetGridLines) ? 0 : 1)), 1);
+	//var offsetAmt = Math.max((scale.ticks.length - ((scale.options.gridLines.offsetGridLines) ? 0 : 1)), 1);
+	var offsetAmt = Math.max((scale.ticks.length - 0), 1);
 	var panSpeed = panOptions.speed;
 	var minIndex = scale.minIndex;
 	var step = Math.round(scale.width / (offsetAmt * panSpeed));
